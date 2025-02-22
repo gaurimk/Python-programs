@@ -1,0 +1,15 @@
+Write a Program to check whether the number is Magic Number or Not.
+def magic(n):
+    sum1=0
+    while(n>0):
+        r=n%10
+        n=n//10
+        sum1=sum1+r
+    if(sum1>9):
+        return magic(sum1)
+    return sum1
+n=int(input("Enter the n value:"))
+if(magic(n)==1):
+    print("{} is a magic number".format(n))
+else:
+    print("{} is not a magic number".format(n))
