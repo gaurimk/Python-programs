@@ -1,0 +1,14 @@
+#neon number
+def neon(n):
+    sum1=0
+    m=n*n
+    while(m>0):
+        r=m%10
+        sum1+=r
+        m=m//10
+    return sum1
+n=int(input("Enter the n value:"))
+if(neon(n)==n):
+    print("{} is a neon number".format(n))
+else:
+    print("{} is not a neon number".format(n))
