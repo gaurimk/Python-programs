@@ -1,0 +1,16 @@
+#Write a Program to check whether the number is Spy Number or Not.
+def spy(n):
+    sum1=0
+    product=1
+    while(n>0):
+        r=n%10
+        sum1+=r
+        product*=r
+        n=n//10
+    return sum1,product
+n=int(input("Enter the value of n:"))
+a,b=spy(n)
+if a==b:
+    print("{} is a spy number".format(n))
+else:
+    print("{} is not a spy number".format(n))
