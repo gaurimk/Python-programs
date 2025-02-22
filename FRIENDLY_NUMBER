@@ -1,0 +1,13 @@
+#Write a program to check whether a given number is Friendly pair or not.
+def friendly(n):
+    sum1=0
+    for i in range(1,(n//2)+1):
+        if(n%i==0):
+            sum1+=i
+    return sum1
+m=int(input("Enter the m value:"))
+n=int(input("Enter the n value:"))
+if(friendly(n)==m and friendly(m)==n):
+    print("{} and {} is a friendly number".format(m,n))
+else:
+    print("{} and {} is not a frindly number".format(m,n))
