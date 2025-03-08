@@ -1,0 +1,22 @@
+#153 armstrong number
+def pow(m,n):
+    pow1=1
+    while(n>0):
+        pow1=pow1*m
+        n=n-1
+    return pow1
+def countt(n):
+    c=0
+    while(n>0):
+        n=n//10
+        c+=1
+    return c
+def armstrong(n):
+    sum1=0
+    c=countt(n)
+    while(n>0):
+        r=n%10
+        v=pow(r,c)
+        sum1=sum1+v
+        n=n//10
+    return sum1
